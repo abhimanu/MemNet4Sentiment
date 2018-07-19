@@ -28,10 +28,10 @@ flags.DEFINE_string("checkpoint_dir", "checkpoints", "checkpoint directory [chec
 flags.DEFINE_string("data_name", "ptb", "data set name [ptb]")
 flags.DEFINE_boolean("is_test", False, "True for testing, False for Training [False]")
 flags.DEFINE_boolean("show", False, "print progress [False]")
-flags.DEFINE_string("glove_embedn", "../datasets_senti/glove.42B.300d.zip", "glove embeddings path")
-flags.DEFINE_string("xml_data_dir", "../datasets_senti/Aspect-Based-Sentiment-Analysis/datasets/ABSA-SemEval2014/", "xml data dir")
+flags.DEFINE_string("glove_embedn", "./datasets_senti/glove.42B.300d.zip", "glove embeddings path")
+flags.DEFINE_string("xml_data_dir", "./datasets_senti/", "xml data dir")
 flags.DEFINE_string("laptop_train", "Laptop_Train_v2.xml", "Laptop train xml")
-flags.DEFINE_string("laptop_test", "ABSA_Gold_TestData/Laptops_Test_Gold.xml", "Laptop test xml")
+flags.DEFINE_string("laptop_test", "Laptops_Test_Gold.xml", "Laptop test xml")
 
 FLAGS = flags.FLAGS
 
