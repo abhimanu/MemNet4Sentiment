@@ -88,9 +88,12 @@ class MemN2N_ABSA(object):
         #self.W_att = tf.Variable(tf.random_uniform(shape=[self.mem_size, \
         # TODO: research very surprising that same W_att is used for all memory
         # words
-        self.W_att = tf.Variable(tf.random_uniform(shape=[2*self.edim, 1], \
-            minval=-0.01, maxval=0.01))
-        self.b_att = tf.Variable(tf.random_uniform(shape=[], minval=-0.01, maxval=0.01))
+        #self.W_att = tf.Variable(tf.random_uniform(shape=[2*self.edim, 1], \
+        #    minval=-0.01, maxval=0.01))
+        self.W_att = tf.Variable(tf.random_normal(shape=[2*self.edim, 1], \
+                stddev=self.init_std))
+        #self.b_att = tf.Variable(tf.random_uniform(shape=[], minval=-0.01, maxval=0.01))
+        self.b_att = tf.Variable(tf.random_normal(shape=[], stddev=self.init_std))
         self.W_lin = tf.Variable(tf.random_uniform(shape=[1, self.edim, self.edim], \
                 minval=-0.01, maxval=0.01)) # ignorign multi-word aspect
 
